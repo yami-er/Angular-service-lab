@@ -11,7 +11,11 @@ private personArr: Person[] =[
 ];
   constructor() { }
   getPerson():Person[]{
+    this.delay(4000);
     return this.personArr;
 }
+async delay(ms: number) {
+  await new Promise(resolve => setTimeout(()=>resolve(), ms));
+ } 
 
 }
